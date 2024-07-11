@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+</head>
+<body>
+    <h1>User Details</h1>
+
+    <button onclick="getUserDetails()">Get User Details</button>
+
+    <ul id="userDetailsList"></ul>
+
+    <script>
+        function getUserDetails() {
+            fetch('/AppointementDetails') // Assuming this is the endpoint to fetch user details
+                .then(response => response.json())
+                .then(data => {
+                    const userDetailsList = document.getElementById('userDetailsList');
+                    userDetailsList.innerHTML = ''; // Clear previous list items
+
+                    if (data.length > 0) {
+                        // If user details are available, populate the list
+                        data.forEach(user => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = `Name: ${user.name}, Email: ${user.email}, Phone: ${user.phone}`;
+                            userDetailsList.appendChild(listItem);
+                        });
+                    } else {
+                        // If no user details are available, show a message
+                        const listItem = document.createElement('li');
+                        listItem.textContent = 'No user details available.';
+                        userDetailsList.appendChild(listItem);
+                    }
+                })
+                .catch(error => console.error('Error fetching user details:', error));
+        }
+    </script>
+</body>
+</html>

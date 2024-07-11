@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <style>
+       html, body {
+            background: black;
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .bgimg {
+           
+            background-image: url("/images/patientHomebg3.jpg");
+            background-repeat: no-repeat;
+            width: 100%;
+            background-size: cover;
+            height: 80%;
+            padding: 2px 8px;
+            margin-bottom: 20px;
+        }
+
+        .hd {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            position: relative;
+            background-color: transparent;
+        }
+        .logo{
+            width: 20%;
+            height: 10;
+        }
+        .logo-img {
+            height: 80px;
+            margin: 5px 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+       
+
+        .bt {
+            display: flex;
+            margin-left: auto;
+            margin-top: 2%;
+            list-style:none;
+            margin-right: 4%;
+           }
+        .bt li i{
+           font-size: 19px;
+           margin: 5px 2px;
+        }
+
+        .bt li a {
+            margin: 5px 20px;
+            height: 40%;
+            width: 10%;
+            font-size: 22px;
+            font-family: Rosario;
+            font-weight: 700;
+            text-decoration:none;
+            color: rgb(0, 0, 0);
+        }
+        
+        .bt li i {
+            margin: 3px;
+        }
+
+        .hmbg {
+            display: inline;
+            width: 100%;
+
+        }
+
+        .p1 {
+            margin-top: 100px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 35px;
+            color: white;
+            margin-left: 50px;
+        }
+
+        .p2 {
+            margin-top: -25px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: black;
+            margin-left: 100px;
+        }
+
+        .bt1 {
+            margin-left: 140px;
+            border: 1px solid rgb(23, 233, 58);
+            background-color: transparent;
+            border-radius: 24px;
+            width: 100px;
+            color: rgb(18, 18, 245);
+            height: 40px;
+            font-size: 18px;
+        }
+
+        .sec-1 {
+           
+           color: rgb(173, 173, 173);
+           width: 100%;
+           background-color: rgb(224, 219, 219);
+           align-items: center;
+           justify-content: center;
+           text-align: center;
+           padding-bottom: 5% ;
+       }
+
+       .sec-1 h1 {
+           display: inline-block;
+           background-image: linear-gradient(to bottom right, rgb(67, 253, 77), rgb(7, 158, 75));
+           border-radius: 18px;
+           width: 194px;
+           height: 45px;
+           line-height: 45px;
+           text-align: center;
+           align-items: center;
+           justify-content: center;
+           font-family: Rosario;
+           font-size: 30px;
+           color: rgb(223, 241, 241);
+       }
+
+       .container {
+           width: 100%;
+           padding: 5%;
+           background-color: #34495e;
+
+           h1 {
+               background-color: rgba(#fff, 0.5);
+               margin-bottom: 40px;
+           }
+       }
+
+       .card-group {
+           display: flex;
+           flex-wrap: wrap;
+           align-items: center;
+           justify-content: center;
+           width:100%; 
+           margin: 0px;
+           padding: 0px;
+           background-color: transparent;
+       }
+
+       .card {
+           display: block;
+           width: 250px;
+           margin: 20px 20px;
+           padding: 5% 0;
+           text-align: center;
+           background-color: black;
+       }
+
+       .card-group.gold {
+           .card {
+               border-radius: 12px;
+               width: 300px;
+               height: 50%;
+               background-color: rgb(83, 201, 248);
+           }
+       }
+       .card i{
+           color: black;
+           font-size: 50px;
+           align-items: center;
+           justify-content: center;
+       }
+       .card h3{
+           color: black;
+           font-size: 20px;
+           text-align: center;
+       }
+       .card p{
+           color: white;
+           font-size: 12px;
+           text-align: center;
+           margin: 0px 10%;
+           width: 80%;
+       }
+       .footer {
+           background-color: #333;
+           color: #fff;
+           text-align: center;
+           padding: 10px;
+           width: 100%;
+       }
+       .bt li a.active {
+           color: #2ef7ed; 
+           text-shadow: 0 0 20px #2ef7ed; 
+           text-decoration: underline; 
+           font-weight: bold; 
+       }
+    </style>
+    <script src="https://kit.fontawesome.com/9798d14937.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuItems = document.querySelectorAll(".bt li a");
+
+            menuItems.forEach(function(item) {
+                item.addEventListener("click", function() {
+                    menuItems.forEach(function(item) {
+                        item.classList.remove("active");
+                    });
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bgimg">
+        <header class="hd">
+            <div class="logo"><img class="logo-img" src="/images/logo.png"></div>
+            
+            <ul class="bt">
+                <li><a href="patientHome.html" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="appointement.html"><i class="fa-solid fa-user-doctor"></i>Consult Online</a></li>
+                <li><a href="#"><i class="fa-solid fa-notes-medical"></i>Prescription</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
+                <li><a href="ProfileEdit.html"><i class='bx bxs-user-account'></i>Account</a></li>
+            </ul>
+        </header>
+        <section class="box1">
+            <p class="p1">Your Health, Your Choice</p>
+            <p class="p2">Your Health Our Priority</p>
+            <button class="bt1">know us</button>
+        </section>
+        <section></section>
+    </div>
+    <section class="sec-1">
+        <h1> Our Services 
+        </h1>
+        <ul class="card-group gold">
+            <li class="card"><i class="fa-solid fa-user-nurse"></i></i><h3>Doctors</h3><p>Experiences and devoted doctors are ready to help with your problems</p></li>
+            <li class="card"><i class="fa-solid fa-truck-medical"></i><h3>Emergency</h3><p>we are always ready to help you need urgent help! Oue emergency team is here for you</p></li>
+            <li class="card"><i class="fa-solid fa-suitcase-medical"></i><h3>24 / 7 Service</h3><p>Anytime you need help, you may contact</p></li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

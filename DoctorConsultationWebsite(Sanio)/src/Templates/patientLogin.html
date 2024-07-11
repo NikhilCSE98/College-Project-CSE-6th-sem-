@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanio - patient</title>
+    <link rel="stylesheet" href="./css/patientLogin.css">
+
+  </head>
+
+  <body>
+    <div class="patient">
+      <form id="loginform">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="email" name="email" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+          <input type="password" id="pass" name="pass" placeholder="Password" required>
+        </div>
+        
+
+        <div>
+            <button class="btn">Submit</button>
+        </div>
+        <div class="box2">
+            <a href="sign-up-patient.html">Create new account</a>
+        </div>
+      </form>
+    </div>
+    
+    <script defer>
+
+      const form=document.getElementById('loginform');
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+         const data=new FormData(e.target);
+        const dataobj= Object.fromEntries(data.entries());
+
+        fetch('/UserLogin',
+      {
+        headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+        method:'POST',
+        body:JSON.stringify(dataobj)
+      })
+      .then(response => response.json())
+        .then(data =>{
+           localStorage.setItem('token',data.token);
+           if(data.token){
+            window.location.href = "/patientHome.html";
+           }
+        } ) 
+        .catch(error => console.error('Error user data:', error));
+      })
+      
+  
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Header styles */
+        html, body {
+            background: black;
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+.hd {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: rgb(253, 253, 253);
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo-img {
+    height: 80px;
+    margin: 5px 5px;
+}
+
+.bt {
+    display: flex;
+    margin-left: auto;
+    margin-top: 2%;
+    list-style:none;
+    margin-right: 4%;
+}
+
+.bt li i {
+    font-size: 19px;
+    margin: 5px 2px;
+}
+
+.bt li a {
+    margin: 5px 20px;
+    font-size: 22px;
+    font-family: Rosario;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.bt li i {
+    margin: 3px;
+}
+
+.bt1 {
+    margin-left: 140px;
+    border: 1px solid rgb(23, 233, 58);
+    background-color: transparent;
+    border-radius: 24px;
+    width: 100px;
+    color: rgb(18, 18, 245);
+    height: 40px;
+    font-size: 18px;
+}
+
+.menu-icon {
+    font-size: 25px;
+    font-weight: bold;
+    color:#fff;
+    display: block;
+    line-height: 90px;
+    right: 10%;
+}
+
+/* Main content section styles */
+.sec-1 {
+    width: 98%;
+    background-color: #91e7e7;
+    min-height: 50%;
+    margin: 1% auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+}
+.appform{
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+.fheading {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+.Apdetails{
+    height: 100%;
+    margin: 0% auto;
+    text-align: center;
+}
+.Apdetails fieldset{
+     align-items: center;
+     justify-content: center;
+    text-align: left;
+    border: 2px solid black;
+    margin:15px auto;
+}
+
+ textarea{
+    width:60%;
+    height: 2%;
+ }
+ .bt2{
+    font-size: 24px;
+    width:100px;
+    margin: 15px auto;
+    color: white;
+    background-color: rgb(36, 197, 36);
+    border: 1px solid black;
+    border-radius: 10px;
+ }
+ .inp{
+    height: 20px;
+ }
+
+ .sel{
+    height: 20px;
+ }
+ .Symptom
+ {
+    margin: 10px auto;
+ }
+ /* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin: 15px 0px;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+}
+        @media only screen and (max-width: 768px) {
+            .logo {
+                width: 30%;
+            }
+
+            .hd {
+                 height: auto;
+                flex-direction: column; 
+                display: flex;
+            }
+
+            .bt {
+                margin: 20px 0;
+            }
+
+            .bt li {
+                margin: 10px 0;
+            }
+
+            .bt li a {
+                margin: 0;
+            }
+
+            .bt1 {
+                margin-left: 20%;
+            }
+
+            .menu-icon {
+                font-size: 25px;
+                font-weight: bold;
+                color:#000000;
+                display: block;
+                position: absolute;
+                line-height: 90px;
+                right: 10%;
+            }
+
+            .bt {
+                display: none;
+            }
+
+            .bt.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 90px;
+                left: -7%;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 10px 10px;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width: 700px) {
+            .menu-icon {
+                display:  none;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/9798d14937.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <header class="hd">
+            <div class="logo"><img class="logo-img" src="./images/logo.png"></div>
+            <ul class="bt" id="menu">
+                <li><a href="patientHome.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="./appointement.html"><i class="fa-solid fa-user-doctor"></i>Consult Online</a></li>
+                <li><a href="#"><i class="fa-solid fa-notes-medical"></i>Prescription</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
+                <li><a href="ProfileEdit.html"><i class='bx bxs-user-account'></i>Account</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <section class="sec-1">
+        <form class="appform" method="post" action="/appointementRequest">
+            <div class="fheading"><hl>Appointment Details</hl></div>
+            <div class="Apdetails">
+                <fieldset required="true">
+                    <legend>Date and Time</legend>
+                    <input type="Datetime-local" class="inp" name="date"/>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Doctor's Name</legend>
+                    Dr. <input type="text" maxlength="25" class="inp" name="dname" />
+                  </fieldset>
+                  <fieldset>
+                    <legend>Specialisation</legend>
+                    <select name="Specialist"  placeholder="Duration" class="sel" >
+                        <option value="Cardiologists">Cardiologists</option>
+                        <option value="ENT Specialists">ENT Specialists</option>
+                        <option value="Orthopedic Surgeons">Orthopedic Surgeons</option>
+                        <option value="Psychiatrists">Psychiatrists</option>
+                        <option value="Neurologists">Neurologists</option>
+                        <option value="Oncologists">Oncologists</option>
+                      </select>
+                  </fieldset>
+                  <fieldset aria-required="true">
+                    <legend>Appointme Duration</legend>
+                    Duration :
+                    <select name="Duration" id="Duration" placeholder="Duration" class="sel">
+                      <option value="15 min">15 min</option>
+                      <option value="30 min">30 min</option>
+                      <option value="45 min">45 min</option>
+                      <option value="1 Hr">1 Hr 00 min</option>
+                      <option value="1 Hr 30 min">1 Hr 30 min</option>
+                      <option value="2 Hr 00 min">2 Hr</option>
+                    </select>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <div class="Symptom" >
+                        <label for="Symptom_1">Symptom : </label>
+                        <select name="Symptom_1" id="Symptom1" >
+                          <option value="-select-">-select-</option>
+                          <option value="Fever">Fever</option>
+                          <option value="Cough">Cough</option>
+                          <option value="Vomit">Vomit</option>
+                          <option value="Sneeze">Sneeze</option>
+                          <option value="Weakness">Weakness</option>
+                          <option value="Diarrhea">Diarrhea</option>
+                          <option value="Headache">Headache</option>
+                          <option value="Itching">Itching</option>
+                        </select>
+                      </div>
+
+                      <div class="Symptom">
+                        <label for="Symptom_2">Symptom : </label>
+                        <select name="Symptom_2" id="Symptom1">
+                          <option value="-select-">-select-</option>
+                          <option value="Fever">Fever</option>
+                          <option value="Cough">Cough</option>
+                          <option value="Vomit">Vomit</option>
+                          <option value="Sneeze">Sneeze</option>
+                          <option value="Weakness">Weakness</option>
+                          <option value="Diarrhea">Diarrhea</option>
+                          <option value="Headache">Headache</option>
+                          <option value="Itching">Itching</option>
+                        </select>
+                      </div>
+
+                      <div class="Symptom">
+                        <label for="Symptom_3">Symptom : </label>
+                        <select name="Symptom_3" id="Symptom1">
+                          <option value="-select-">-select-</option>
+                          <option value="Fever">Fever</option>
+                          <option value="Cough">Cough</option>
+                          <option value="Vomit">Vomit</option>
+                          <option value="Sneeze">Sneeze</option>
+                          <option value="Weakness">Weakness</option>
+                          <option value="Diarrhea">Diarrhea</option>
+                          <option value="Headache">Headache</option>
+                          <option value="Itching">Itching</option>
+                        </select>
+                      </div>
+                    <legend>Symptoms</legend>
+                    <textarea name="Other_Symp"></textarea>
+                  </fieldset>
+                  <button class="bt2">Submit</button>
+            </div>
+        </form>
+    </section>
+    <footer class="footer">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

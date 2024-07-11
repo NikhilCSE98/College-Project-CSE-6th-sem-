@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/doctorSignup.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .patient{
+    width: 420px;
+    height: 100%;
+    background: rgb(0,0,0,0.5);
+    border: 2px solid rgba(255, 255, 255, .8);
+    backdrop-filter: blur(9px);
+    color: #fff;
+    border-radius: 12px;
+    opacity: 0.9;
+    padding: 10px 40px;
+  }
+  .patient h1{
+    font-size: 36px;
+    text-align: center;
+  }
+  .patient .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .input-box input{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #61e9f3;
+    padding: 20px 45px 20px 20px;
+  }
+  .input-box input::placeholder{
+    color: #fff;
+  }
+  .input-file{
+    width: 100%;
+  }
+  .input-file label{
+    text-decoration: underline;
+    margin: 10px;
+    font-size: 16px;
+  }
+  .input-file .file{
+    color: red;
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 10px;
+  }
+   .btn{
+    width: 100%;
+    height: 45px;
+    background: #0c0c0c;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 253, 253);
+  }
+  .box2{
+    margin: 10px;
+  }
+  .box2 a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }

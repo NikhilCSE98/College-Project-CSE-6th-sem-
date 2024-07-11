@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <style>
+         html, body {
+            background: rgb(219, 219, 219);
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .hd {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .logo {
+            width: 20%;
+        }
+
+        .logo-img {
+            height: 80px;
+            margin: 5px 5px;
+        } 
+
+        .bt {
+            display: flex;
+            margin-left: auto;
+            margin-top: 2%;
+            list-style:none;
+            margin-right: 4%;
+        }
+
+        .bt li i {
+            font-size: 19px;
+            margin: 5px 2px;
+        }
+
+        .bt li a {
+            margin: 5px 20px;
+            font-size: 22px;
+            font-family: Rosario;
+            font-weight: 700;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        .bt li i {
+            margin: 3px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+        .box{
+            margin: 1% 10%;
+            display: flex;
+            height: 70%;
+        }
+        .box1{
+            background-color: rgb(29, 22, 71);
+            width:25%;
+            height: 100%;
+            margin: 0px 1%;
+        }.box2{
+             background-color: #fff;
+            border: 1px solid black;
+            width: 65%;
+            height: 100%;
+            margin: 0px 1%;
+        }
+        .input-box h1{
+            font-size: 20px;
+            margin: 10px 10px;
+            text-decoration: underline;
+        }
+        .input-box div{
+            width: 40%;
+            display: inline-block;
+        }
+        .input-box div>label{
+            font-size: 18px;
+            margin: 10px;
+            font-weight: 500;
+        }
+        .input-box div>input{
+            margin: 10px;
+            height: 20px;
+            width: 90%;
+            outline:none;
+            border: 1px solid black;
+        }
+        .scbt{
+            width: 20%;
+            height: 38px;
+            border-radius: 20px;
+            border: none;
+            background-color: black;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px;
+            text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px -1px 0px 0px #b4bd2c;
+            margin-left: 10%;
+        }
+        .pic{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .list{
+            width: 100%;
+            
+        }
+        .list li{
+            width: 100%;
+            margin-top: 10%;
+            color: white;
+            list-style: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .list li a{
+            color: white;
+        }
+        .list li.active a {
+            color: #ff0000; /* Change this to the desired color */
+        }
+        .UserP  {
+
+font-size: 18px;
+font-weight: bold;   
+margin: 20px;
+color: black;
+}
+.UserP p{
+font-size: 20px;
+}
+        /* Responsive styles */
+        @media only screen and (max-width: 1024px) {
+            .logo {
+                width: 25%;
+            }
+            .bt {
+                margin-right: 2%;
+            }
+            .input-box div{
+                width: 45%;
+            }
+            .scbt{
+                margin-left: 5%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .logo {
+                width: 30%;
+            }
+            .hd {
+                 height: auto;
+                flex-direction: column; 
+                display: flex;
+            }
+
+            .bt {
+                margin: 20px 0;
+            }
+            .box1{
+                width: 100%;
+                text-align: left;
+            }
+
+            .bt li {
+                margin: 10px 0;
+            }
+
+            .bt li a {
+                margin: 0;
+            }
+
+            .menu-icon {
+                font-size: 25px;
+                font-weight: bold;
+                color:#fff;
+                display: block;
+                position: absolute;
+                line-height: 90px;
+                right: 10%;
+            }
+
+            .bt {
+                display: none;
+            }
+
+            .bt.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 90px;
+                left: -7%;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 10px 10px;
+                text-align: center;
+            }
+            .input-box div{
+                width: 90%;
+            }
+            .scbt{
+                margin-left: 5%;
+                width: 40%;
+            }
+        }
+
+        @media only screen and (min-width: 700px) {
+            .menu-icon {
+                display:  none;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/9798d14937.js" crossorigin="anonymous"></script>
+    <script src="./js/profile.js">
+    </script>
+</head>
+<body onload="changeContent('profile')">
+        <header class="hd">
+            <div class="logo"><img class="logo-img" src="./images/logo.png"></div>
+            <ul class="bt" id="menu">
+                <li><a href="DoctorHome.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="PatientList.html"><i class="fa-solid fa-user-doctor"></i>Patient List</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
+                <li><a href="DocotrProfile.html"><i class='bx bxs-user-account'></i>Account</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+       <section class="box">
+        <div class="box1">
+           <ul class="list">
+                <li id="profile" class="active"><a href="#" onclick="changeContent('profile')">Profile</a></li>
+                <li id="logout"><a href="home.html" >Log Out</a></li>
+           </ul>
+        </div>
+        <div class="box2" id="content">
+            <!-- User information will be displayed here -->
+        </div>
+       </section>
+    <footer class="footer">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    function changeContent(page) {
+        var content = document.getElementById("content");
+
+        switch (page) {
+            case 'profile':
+            const token = localStorage.getItem('token');
+
+fetch('/DoctorProfile', {
+    method: 'GET',
+    headers: {
+        'authorization': `Bearer ${token}`,
+    }
+})
+.then(response => response.json())
+.then(data => {
+    const userDataElement = document.getElementById('content');
+    console.log(data)
+    userDataElement.innerHTML = `
+    <div class="UserP">
+            <p>Name: ${data.name}</p>
+            <p>Email: ${data.email}</p>
+            <p>Mobile: ${data.mobile}</p>
+            <p>Age: ${data.age}</p>
+            <p>Home City: ${data.home_city}</p>
+            <p>Gender: ${data.gender}</p>
+            </div>
+    `;
+})
+.catch(error => console.error('Error fetching user data:', error));
+                break;
+            // Other cases for 'edit' and 'change-password' remain the same
+        }
+
+        var listItems = document.querySelectorAll(".list li");
+        listItems.forEach(function(item) {
+            item.classList.remove("active");
+        });
+
+        var clickedItem = document.getElementById(page);
+        clickedItem.classList.add("active");
+    }
+
+
+        fetch('/DoctorProfile', {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${token}`,
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const userDataElement = document.getElementById('content');
+            console.log(data)
+            userDataElement.innerHTML = `
+                <p>Name: ${data.name}</p>
+                <p>Email: ${data.email}</p>
+                <p>Mobile: ${data.mobile}</p>
+                <p>Age: ${data.age}</p>
+                <p>Home City: ${data.home_city}</p>
+                <p>Gender: ${data.gender}</p>
+            `;
+        })
+        .catch(error => console.error('Error fetching user data:', error));
+    </script>
+</body>
+</html>

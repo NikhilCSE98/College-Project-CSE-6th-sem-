@@ -1,0 +1,230 @@
+html, body {
+    background: rgb(219, 219, 219);
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.hd {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    position: relative;
+    background-color: transparent;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo-img {
+    height: 80px;
+    margin: 5px 5px;
+} 
+
+.bt {
+    display: flex;
+    margin-left: auto;
+    margin-top: 2%;
+    list-style:none;
+    margin-right: 4%;
+}
+
+.bt li i {
+    font-size: 19px;
+    margin: 5px 2px;
+}
+
+.bt li a {
+    margin: 5px 20px;
+    font-size: 22px;
+    font-family: Rosario;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.bt li i {
+    margin: 3px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+.box{
+    margin: 1% 10%;
+    display: flex;
+    height: 70%;
+}
+.box1{
+    background-color: rgb(29, 22, 71);
+    width:25%;
+    height: 100%;
+    margin: 0px 1%;
+}.box2{
+     background-color: #fff;
+    border: 1px solid black;
+    width: 65%;
+    height: 100%;
+    margin: 0px 1%;
+}
+.input-box h1{
+    font-size: 20px;
+    margin: 10px 10px;
+    text-decoration: underline;
+}
+.input-box div{
+    width: 40%;
+    display: inline-block;
+}
+.input-box div>label{
+    font-size: 18px;
+    margin: 10px;
+    font-weight: 500;
+}
+.input-box div>input{
+    margin: 10px;
+    height: 20px;
+    width: 90%;
+    outline:none;
+    border: 1px solid black;
+}
+.scbt{
+    width: 20%;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+    text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -1px 0px 0px #b4bd2c;
+    margin-left: 10%;
+}
+.pic{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    width: 100%;
+    
+}
+.list li{
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.list li a{
+    color: white;
+}
+.list li.active a {
+    color: #ff0000; 
+}
+
+.user-details-heading {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #000000; 
+}
+
+.user-details-info {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    color: #000000; 
+}
+@media only screen and (max-width: 1024px) {
+    .logo {
+        width: 25%;
+    }
+    .bt {
+        margin-right: 2%;
+    }
+    .input-box div{
+        width: 45%;
+    }
+    .scbt{
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 30%;
+    }
+    .hd {
+         height: auto;
+        flex-direction: column; 
+        display: flex;
+    }
+
+    .bt {
+        margin: 20px 0;
+    }
+    .box1{
+        width: 100%;
+        text-align: left;
+    }
+
+    .bt li {
+        margin: 10px 0;
+    }
+
+    .bt li a {
+        margin: 0;
+    }
+
+    .menu-icon {
+        font-size: 25px;
+        font-weight: bold;
+        color:#fff;
+        display: block;
+        position: absolute;
+        line-height: 90px;
+        right: 10%;
+    }
+
+    .bt {
+        display: none;
+    }
+
+    .bt.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 90px;
+        left: -7%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 10px;
+        text-align: center;
+    }
+    .input-box div{
+        width: 90%;
+    }
+    .scbt{
+        margin-left: 5%;
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .menu-icon {
+        display:  none;
+    }
+}
